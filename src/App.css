@@ -1,0 +1,759 @@
+/* client/src/App.css */
+
+/* Import Font Awesome for icons */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+
+/* Global styles */
+body {
+  background: linear-gradient(135deg, #fff5e6 0%, #fff0db 100%);
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main-container {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  min-height: calc(100vh - 80px); /* Account for fixed navbar */
+  background: transparent;
+}
+
+/* Card enhancements */
+.card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(255, 140, 0, 0.1);
+  transition: all 0.3s ease;
+  background: #fff;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(255, 140, 0, 0.15);
+}
+
+.card-header {
+  background: linear-gradient(135deg, #ff8c00 0%, #ff7700 100%);
+  color: white;
+  border-radius: 12px 12px 0 0 !important;
+  border: none;
+  font-weight: 600;
+}
+
+/* Button enhancements */
+.btn-primary {
+  background: linear-gradient(135deg, #dab99c 0%, #ff8c00 70%);
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  padding: 8px 20px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #ff7700 0%, #ff6600 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(255, 140, 0, 0.3);
+}
+
+.btn-success {
+  background: darkcyan;
+  border: none;
+  border-radius: 8px;
+}
+
+.btn-warning {
+  background: linear-gradient(135deg, #fff3cd 0%, #0dcaf0 100%);
+  border: none;
+  border-radius: 8px;
+}
+
+.btn-danger {
+  background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+  border: none;
+  border-radius: 8px;
+}
+
+.btn-info {
+  background: linear-gradient(135deg, #17a2b8 0%, #138496 100%);
+  border: none;
+  border-radius: 8px;
+}
+
+/* Table enhancements */
+.table {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.table thead th {
+  background: linear-gradient(135deg, #ff8c00 0%, #ff7700 100%);
+  color: white;
+  border: none;
+  font-weight: 600;
+  padding: 15px;
+}
+
+.table tbody tr {
+  transition: all 0.2s ease;
+}
+
+.table tbody tr:hover {
+  background-color: rgba(255, 140, 0, 0.05);
+  transform: scale(1.01);
+}
+
+/* Badge enhancements */
+.badge {
+  border-radius: 6px;
+  font-weight: 500;
+  padding: 6px 12px;
+}
+
+/* Form enhancements */
+.form-control {
+  border-radius: 8px;
+  border: 2px solid #e9ecef;
+  padding: 10px 15px;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #ff8c00;
+  box-shadow: 0 0 0 0.2rem rgba(255, 140, 0, 0.25);
+}
+
+.form-select {
+  border-radius: 8px;
+  border: 2px solid #e9ecef;
+  padding: 10px 15px;
+}
+
+.form-select:focus {
+  border-color: #ff8c00;
+  box-shadow: 0 0 0 0.2rem rgba(255, 140, 0, 0.25);
+}
+
+/* Search enhancements */
+.input-group .form-control {
+  border-right: none;
+}
+
+.input-group .btn {
+  border-left: none;
+  border-radius: 0 8px 8px 0;
+}
+
+/* White space preservation for text areas */
+.white-space-pre-wrap {
+  white-space: pre-wrap;
+}
+
+/* Loading spinner */
+.spinner-border {
+  color: #ff8c00;
+}
+
+/* Alert enhancements */
+.alert {
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.alert-warning {
+  background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+  color: #856404;
+}
+
+.alert-danger {
+  background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
+  color: #721c24;
+}
+
+.alert-success {
+  background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+  color: #155724;
+}
+
+.alert-info {
+  background: linear-gradient(135deg, #cce7ff 0%, #b3d9ff 100%);
+  color: #0c5460;
+}
+
+/* Mark (highlight) styling for search results */
+mark {
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .main-container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  .card {
+    margin-bottom: 20px;
+  }
+  
+  .table-responsive {
+    border-radius: 12px;
+  }
+}
+
+/* Print styles */
+/* Professional Estimate Print Styles */
+@media print {
+  /* Reset and base styles */
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    line-height: 1.1;
+    color: #000;
+    background: white;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* Hide interactive elements */
+  .navbar, 
+  .btn,
+  form input,
+  form select,
+  .form-control,
+  .input-group,
+  .alert,
+  .modal,
+  .dropdown,
+  nav,
+  .pagination,
+  .tab-content:not(.active),
+  .collapse:not(.show) {
+    display: none !important;
+  }
+  
+  /* Container and layout */
+  .container,
+  .container-fluid {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  .main-container {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  /* Page setup - Single page optimization */
+  @page {
+    size: A4;
+    margin: 0.3in 0.4in;
+    orphans: 1;
+    widows: 1;
+  }
+  
+  /* Estimate document structure - Single page constraint */
+  .estimate-document {
+    width: 100%;
+    max-width: 100%;
+    font-size: 9px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    page-break-inside: avoid;
+    transform: scale(0.95);
+    transform-origin: top left;
+  }
+  
+  /* Header section with company info and estimate details */
+  .estimate-header {
+    display: table;
+    width: 100%;
+    border: 1.5px solid #000;
+    margin-bottom: 6px;
+    page-break-inside: avoid;
+    flex-shrink: 0;
+  }
+  
+  .estimate-header-row {
+    display: table-row;
+  }
+  
+  .company-info {
+    display: table-cell;
+    width: 50%;
+    padding: 6px;
+    vertical-align: top;
+    border-right: 1px solid #000;
+  }
+  
+  .estimate-info {
+    display: table-cell;
+    width: 50%;
+    padding: 6px;
+    vertical-align: top;
+  }
+  
+  .company-logo {
+    width: 30px;
+    height: 30px;
+    float: left;
+    margin-right: 6px;
+  }
+  
+  .company-name {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 3px;
+  }
+  
+  .company-details {
+    font-size: 8px;
+    line-height: 1.2;
+  }
+  
+  .estimate-title {
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    text-decoration: underline;
+  }
+  
+  /* Customer information section */
+  .customer-section {
+    border: 1px solid #000;
+    margin-bottom: 6px;
+    padding: 5px;
+    page-break-inside: avoid;
+    flex-shrink: 0;
+  }
+  
+  .customer-header {
+    font-weight: bold;
+    margin-bottom: 3px;
+    text-decoration: underline;
+  }
+  
+  /* Items table - Optimized for single page */
+  .items-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1.5px solid #000;
+    margin-bottom: 6px;
+    font-size: 8px;
+    flex: 1;
+    min-height: 0;
+  }
+  
+  .items-table th {
+    background-color: #f0f0f0;
+    border: 1px solid #000;
+    padding: 3px 2px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 7px;
+    line-height: 1.1;
+    height: 25px;
+    vertical-align: middle;
+  }
+  
+  .items-table td {
+    border: 1px solid #000;
+    padding: 2px 3px;
+    text-align: left;
+    vertical-align: top;
+    font-size: 7px;
+    line-height: 1.1;
+    height: auto;
+    max-height: 30px;
+    overflow: hidden;
+  }
+  
+  .items-table .text-center {
+    text-align: center;
+  }
+  
+  .items-table .text-right {
+    text-align: right;
+  }
+  
+  /* Serial number column */
+  .items-table .serial-col {
+    width: 3%;
+    text-align: center;
+  }
+  
+  /* Item name column */
+  .items-table .item-col {
+    width: 35%;
+  }
+  
+  /* HSN/SAC column */
+  .items-table .hsn-col {
+    width: 8%;
+    text-align: center;
+  }
+  
+  /* Quantity column */
+  .items-table .qty-col {
+    width: 6%;
+    text-align: center;
+  }
+  
+  /* Unit column */
+  .items-table .unit-col {
+    width: 6%;
+    text-align: center;
+  }
+  
+  /* Price column */
+  .items-table .price-col {
+    width: 12%;
+    text-align: right;
+  }
+  
+  /* GST column */
+  .items-table .gst-col {
+    width: 12%;
+    text-align: right;
+  }
+  
+  /* Amount column */
+  .items-table .amount-col {
+    width: 12%;
+    text-align: right;
+  }
+  
+  /* Total row styling */
+  .items-table .total-row {
+    font-weight: bold;
+    background-color: #f9f9f9;
+  }
+  
+  /* Amount in words */
+  .amount-words {
+    border: 1px solid #000;
+    padding: 4px;
+    margin-bottom: 6px;
+    font-weight: bold;
+    page-break-inside: avoid;
+    font-size: 8px;
+    flex-shrink: 0;
+  }
+  
+  /* Summary section */
+  .summary-section {
+    display: table;
+    width: 100%;
+    margin-bottom: 6px;
+    flex-shrink: 0;
+  }
+  
+  .summary-left {
+    display: table-cell;
+    width: 50%;
+    vertical-align: top;
+    padding-right: 6px;
+  }
+  
+  .summary-right {
+    display: table-cell;
+    width: 50%;
+    vertical-align: top;
+  }
+  
+  /* Tax breakdown table */
+  .tax-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #000;
+    font-size: 7px;
+  }
+  
+  .tax-table th,
+  .tax-table td {
+    border: 1px solid #000;
+    padding: 2px;
+    text-align: center;
+    line-height: 1.1;
+  }
+  
+  .tax-table .text-right {
+    text-align: right;
+  }
+  
+  /* Bank details */
+  .bank-details {
+    border: 1px solid #000;
+    padding: 4px;
+    margin-bottom: 6px;
+    font-size: 7px;
+  }
+  
+  .bank-details h6 {
+    margin: 0 0 3px 0;
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 8px;
+  }
+  
+  /* Terms and signature section */
+  .footer-section {
+    display: table;
+    width: 100%;
+    margin-top: 8px;
+    flex-shrink: 0;
+  }
+  
+  .terms-section {
+    display: table-cell;
+    width: 50%;
+    vertical-align: top;
+    padding-right: 8px;
+    font-size: 7px;
+  }
+  
+  .signature-section {
+    display: table-cell;
+    width: 50%;
+    vertical-align: top;
+    text-align: right;
+    font-size: 7px;
+  }
+  
+  .signature-box {
+    border: 1px solid #000;
+    height: 40px;
+    padding: 4px;
+    margin-top: 5px;
+  }
+  
+  /* Currency formatting */
+  .currency {
+    font-family: monospace;
+  }
+  
+  /* Utility classes for print */
+  .print-bold {
+    font-weight: bold;
+  }
+  
+  .print-center {
+    text-align: center;
+  }
+  
+  .print-right {
+    text-align: right;
+  }
+  
+  .print-underline {
+    text-decoration: underline;
+  }
+  
+  .page-break-before {
+    page-break-before: always;
+  }
+  
+  .page-break-after {
+    page-break-after: always;
+  }
+  
+  .no-break {
+    page-break-inside: avoid;
+  }
+  
+  /* Responsive adjustments for print */
+  .print-hide-mobile {
+    display: table-cell !important;
+  }
+  
+  /* Force table layout for consistent printing */
+  .print-table {
+    display: table !important;
+    width: 100% !important;
+  }
+  
+  .print-table-row {
+    display: table-row !important;
+  }
+  
+  .print-table-cell {
+    display: table-cell !important;
+  }
+  
+  /* Override any flex or grid layouts */
+  .row,
+  .col,
+  .col-md-6,
+  .col-lg-6,
+  .d-flex {
+    display: block !important;
+    width: auto !important;
+    flex: none !important;
+  }
+  
+  /* Ensure proper spacing - Compact */
+  .mb-3,
+  .mb-2 {
+    margin-bottom: 4px !important;
+  }
+  
+  .mt-3,
+  .mt-2 {
+    margin-top: 4px !important;
+  }
+  
+  /* Card modifications for print */
+  .card {
+    border: 1px solid #000 !important;
+    margin-bottom: 4px !important;
+    break-inside: avoid;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+  }
+  
+  .card-header {
+    background: #f0f0f0 !important;
+    color: #000 !important;
+    border-radius: 0 !important;
+    border-bottom: 1px solid #000 !important;
+    padding: 4px !important;
+    font-weight: bold;
+    font-size: 8px !important;
+  }
+  
+  .card-body {
+    padding: 6px !important;
+  }
+  
+  /* Table overrides */
+  .table {
+    margin-bottom: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+  
+  .table thead th {
+    background: #f0f0f0 !important;
+    color: #000 !important;
+    border: 1px solid #000 !important;
+  }
+  
+  .table tbody tr:hover {
+    background-color: transparent !important;
+    transform: none !important;
+  }
+  
+  /* Force single page constraints */
+  .estimate-container {
+    max-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Auto-scale content if too large */
+  .auto-scale {
+    transform-origin: top left;
+    width: 100%;
+  }
+  
+  /* Compact mode for many items */
+  .items-table.compact td {
+    padding: 1px 2px;
+    font-size: 6px;
+    line-height: 1;
+    height: 18px;
+    max-height: 18px;
+  }
+  
+  .items-table.compact th {
+    padding: 2px 1px;
+    font-size: 6px;
+    height: 20px;
+  }
+  
+  /* Very compact for 15+ items */
+  .items-table.ultra-compact td {
+    padding: 0.5px 1px;
+    font-size: 5px;
+    line-height: 0.9;
+    height: 14px;
+    max-height: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .items-table.ultra-compact th {
+    padding: 1px;
+    font-size: 5px;
+    height: 16px;
+    line-height: 0.9;
+  }
+  
+  /* Prevent page breaks */
+  * {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+  
+  table, tr, td, th {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+}
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #ff8c00 0%, #ff7700 100%);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #ff7700 0%, #ff6600 100%);
+}
+
+/* Animation for page transitions */
+.page-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.3s ease;
+}
+
+/* Logo animation */
+@keyframes logoFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-3px); }
+}
+
+.navbar-brand:hover .logo {
+  animation: logoFloat 2s ease-in-out infinite;
+}
