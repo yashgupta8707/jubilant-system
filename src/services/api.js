@@ -1,7 +1,7 @@
 // client/src/services/api.js - Updated API service methods for CRM features
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = 'https://caution-mayblabla.onrender.com/api';
 
 const api = axios.create({
   baseURL: API_BASE_URL,
